@@ -1,0 +1,17 @@
+  export interface Iuser{
+    first_name: String,
+    last_name:String,
+    role_id: String,
+    designation:String,
+    phone_number:String,
+    email: String,
+    dob:String,
+    gender:String,
+    bloodgroup:String,
+    country:String,
+    state:String,
+    city:String,
+    address_1:String,
+    address_2:String,
+    pinecode:String,
+  }

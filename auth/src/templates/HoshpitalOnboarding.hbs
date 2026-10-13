@@ -1,0 +1,529 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pen</title>
+      <style>
+         @media only screen and (min-width: 1024px) {
+         .template_header{
+         background-color: red;
+         }
+         .phone{
+         display: none;
+         }
+         .pc{
+         display: block;
+         }
+         }
+         /* Targets standard mobile phones in portrait */
+         @media (max-width: 480px) {
+         .phone{
+         display: block;
+         }
+         .pc{
+         display: none;
+         }
+         }
+         /* Targets tablets and large phones in landscape */
+         @media (min-width: 481px) and (max-width: 1023px) {
+         /* Styles go here */
+         .phone{
+         display: block;
+         }
+         .pc{
+         display: none;
+         }
+         }
+         /* Targets small or older mobile devices (e.g., iPhone SE) */
+         @media (max-width: 320px) {
+         /* Styles go here */
+         .phone{
+         display: block;
+         }
+         .pc{
+         display: none;
+         }
+         }
+      </style>
+   </head>
+   <body style="padding: 0;  ">
+      {{!-- phone/email design --}}
+      <div class="phone">
+         <div
+            class="template"
+            style="
+            {{!-- overflow: hidden; --}}
+            border-radius: 0.75rem;
+            box-shadow:
+            0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px -1px rgba(0, 0, 0, 0.1);"
+            >
+            {{!-- header section --}}
+            <div
+               class="template_header"
+               style="
+               background: linear-gradient(to right, #14967f, #12b886);
+               color: white;
+               width:100%;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <table>
+               <tbody>
+                  <tr>
+                     <td  style=" padding:2rem;   font-size: 6px;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr>
+                              <td style=" display:inline; ">
+                                 <span style="display: inline;"> Status: In review </span>
+                              </td>
+                           </tr>
+                           <tr >
+                              <td style="vertical-align:top; width:32px;">
+                                 <img
+                                    style="height:7rem"
+                                    src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                                    alt="Medinexus logo"
+                                    />
+                              </td>
+                           </tr>
+                           <tr>
+                              <span style="display:block; font-weight: 600; font-size:0.8rem;">A whitelisted healthcare system</span>
+                           </tr>
+                           <tr >
+                              <button style="color:#0f4a3d; background:yellow; margin-top:1rem; border: none; padding:4px 20px; font-weight: 600;">Download guide</button>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </div>
+            {{!-- process section --}}
+            <div
+               class="template_header"
+               style="
+               color:#0f4a3d;
+               background: white;
+               width:100%;
+               padding-top: 1rem;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <b>Hi Silveroakhospital,<b>
+               <p> You're in — <span class="font-semibold">Silveroakhospital</span>'s
+                  account on Medinexus has been created successfully.
+               </p>
+               <p>
+                  Before you can start using the platform, every new account goes
+                  through a 24-hour compliance check — think of it as your account
+                  clearing customs before it's allowed to operate anywhere in Nepal.
+               </p>
+               <b> What we're checking right now</b>
+               <table style="margin-top: 1rem;">
+                  <tbody>
+                     <tr>
+                        <td  style="background-color: #fbf9fa; padding:2rem;   font-size: 6px;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:32px;">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                       <img src="https://i.ibb.co/99QrjrDw/id-card-lanyard-1.png" width="20" height="20" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:10px;">
+                                    <span style="display:block; font-weight: 600;">Identity & licensing</span>
+                                    <p style="margin:4px 0 0;">Verifying your credentials against the relevant health authority registries.</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td  style="background-color: #fbf9fa; padding:2rem;   font-size: 6px;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:32px;">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                       <img  src="https://i.ibb.co/m5PvnbQX/earth-lock.png" width="20" height="20" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:10px;">
+                                    <span style="display:block; font-weight: 600;">Jurisdictional fit</span>
+                                    <p style="margin:4px 0 0;">Matching your registered location(s) to the correct regulatory framework — HIPAA, GDPR, or local equivalents.</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td  style="background-color: #fbf9fa; padding:2rem;   font-size: 6px;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:32px;">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                       <img  src="https://i.ibb.co/RTGFsJ8x/map-pin-house-1.png" width="20" height="20" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:10px;">
+                                    <span style="display:block; font-weight: 600;">Data residency routing</span>
+                                    <p style="margin:4px 0 0;">Making sure your data lands in the right region from day one.</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td  style="background-color: #fbf9fa; padding:2rem;   font-size: 6px;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:32px;">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                       <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="20" height="20" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:10px;">
+                                    <span style="display:block; font-weight: 600;">Data residency routing</span>
+                                    <p style="margin:4px 0 0;">Pre-building the compliance logs your account will need.</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td  style="background-color:#e9f7f3; padding:0.8rem;   font-size: 6px; border:1px solid #bfe8dd">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:28px;">
+                                    <div >
+                                       <img   src="https://i.ibb.co/hFBtTCyB/circle-check-big-1.png" width="15" height="15" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:10px;">
+                                    <p style="margin:4px 0 0;">                        You don't need to do anything — no forms, no follow-ups. We'll email you the moment your account clears, usually well before the 24-hour mark.</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+            {{!-- footer section --}}
+            <div
+               class="template_header"
+               style="
+               background: #fef9c2;
+               color: white;
+               width:100%;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <table>
+                  <tbody>
+                     <tr style="font-size: 6px; color:grey">
+                        <td >Questions in the meantime? Reach us at</td>
+                        <td> <img
+                           width="100"
+                           height="50"
+                           src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                           alt="Medinexus logo"
+                           /></td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td  style="font-size: 1px; color:grey;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:24px; display:inline">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px;  border-radius: 50%;">
+                                       <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="8" height="8" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:5px;">
+                                    <span style="display:block;">+977 982 484 5020</span>
+                                    <p style="margin:4px 0 0;">Call or WhatsApp</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                        <td  style="font-size: 1px; color:grey; padding-left:2rem;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:24px; display:inline">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px;  border-radius: 50%;">
+                                       <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="8" height="8" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:5px;">
+                                    <span style="display:block;">support@medinexus.com</span>
+                                    <p style="margin:4px 0 0;">Email support</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div style="overflow:hidden" class="pc">
+         <div style="
+            {{!-- overflow: hidden; --}}
+            border-radius: 0.75rem;
+            box-shadow:
+            0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            ">
+            <div
+               class="template_header"
+               style="
+               background: linear-gradient(to right, #14967f, #12b886);
+               color: white;
+               width:100%;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <table style=" width:100%">
+                  <tbody>
+                     <tr>
+                        <td>
+                           <h1>Medinexus</h1>
+                        </td>
+                        <td>  <img
+                           style="height:7rem"
+                           src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                           alt="Medinexus logo"
+                           /></td>
+                     </tr>
+                     <tr><span>A whitelisted healthcare system</span></tr>
+                     <tr><button style="color:#0f4a3d; background:yellow; margin-top:1rem; border: none; padding:4px 20px; font-weight: 600; display:inline">Download guide</button></tr>
+                  </tbody>
+               </table>
+               <div >
+               </div>
+            </div>
+         </div>
+         <div
+            class="template_header"
+            style="
+            color:#0f4a3d;
+            background: white;
+            width:100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            "
+            >
+            <b>Hi Silveroakhospital,<b>
+            <p> You're in — <span class="font-semibold">Silveroakhospital</span>'s
+               account on Medinexus has been created successfully.
+            </p>
+            <p>
+               Before you can start using the platform, every new account goes
+               through a 24-hour compliance check — think of it as your account
+               clearing customs before it's allowed to operate anywhere in Nepal.
+            </p>
+            <b> What we're checking right now</b>
+            <table style="margin-top: 1rem;  ;width:100%">
+               <tbody>
+                  <tr>
+                     <td  style="background-color: #fbf9fa; padding:2rem;   font-size: 0.8rem;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:32px;">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                    <img src="https://i.ibb.co/99QrjrDw/id-card-lanyard-1.png" width="20" height="20" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:10px;">
+                                 <span style="display:block; font-weight: 600;">Identity & licensing</span>
+                                 <p style="margin:4px 0 0;">Verifying your credentials against the relevant health authority registries.</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <table style="width:100%">
+               <tbody >
+                  <tr>
+                     <td  style="background-color: #fbf9fa; padding:2rem;   font-size: 0.8rem;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:32px;">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                    <img  src="https://i.ibb.co/m5PvnbQX/earth-lock.png" width="20" height="20" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:10px;">
+                                 <span style="display:block; font-weight: 600;">Jurisdictional fit</span>
+                                 <p style="margin:4px 0 0;">Matching your registered location(s) to the correct regulatory framework — HIPAA, GDPR, or local equivalents.</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <table style="width:100%">
+               <tbody>
+                  <tr>
+                     <td  style="background-color: #fbf9fa; padding:2rem;   font-size:0.8rem;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:32px;">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                    <img  src="https://i.ibb.co/RTGFsJ8x/map-pin-house-1.png" width="20" height="20" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:10px;">
+                                 <span style="display:block; font-weight: 600;">Data residency routing</span>
+                                 <p style="margin:4px 0 0;">Making sure your data lands in the right region from day one.</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <table style="width:100%">
+               <tbody>
+                  <tr>
+                     <td  style="background-color: #fbf9fa; padding:2rem;   font-size:0.8rem;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:32px;">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px; border-radius:6px;">
+                                    <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="20" height="20" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:10px;">
+                                 <span style="display:block; font-weight: 600;">Data residency routing</span>
+                                 <p style="margin:4px 0 0;">Pre-building the compliance logs your account will need.</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+            <table style="width:100%">
+               <tbody>
+                  <tr>
+                     <td  style="background-color:#e9f7f3; padding:0.8rem;   font-size: 10px; border:1px solid #bfe8dd">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:28px;">
+                                 <div >
+                                    <img   src="https://i.ibb.co/hFBtTCyB/circle-check-big-1.png" width="15" height="15" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:10px;">
+                                 <p style="margin:4px 0 0;">                        You don't need to do anything — no forms, no follow-ups. We'll email you the moment your account clears, usually well before the 24-hour mark.</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+         <div
+            class="template_header"
+            style="
+            background: #fef9c2;
+            color: white;
+            width:100%;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            "
+            >
+            <table style="width: 100%;">
+               <tbody>
+                  <tr style="font-size: 1rem; color:grey">
+                     <td >Questions in the meantime? Reach us at</td>
+                     <td> <img
+                        width="180"
+                        height="110"
+                        src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                        alt="Medinexus logo"
+                        /></td>
+                  </tr>
+                  <tr style="font-size: 1rem; color:grey">
+                     <td>
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:24px; display:inline">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:14px;  border-radius: 50%;">
+                                    <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="16" height="16" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:5px;">
+                                 <span style="display:block;">+977 982 484 5020</span>
+                                 <p style="margin:4px 0 0;">Call or WhatsApp</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                     <td>
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:24px; display:inline">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:14px;  border-radius: 50%;">
+                                    <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="16" height="16" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:5px;">
+                                 <span style="display:block;">support@medinexus.com</span>
+                                 <p style="margin:4px 0 0;">Email support</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                     <td style="display: none;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:24px; display:inline">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:14px;  border-radius: 50%;">
+                                    <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="16" height="16" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:5px;">
+                                 <span style="display:block;">support@medinexus.com</span>
+                                 <p style="margin:4px 0 0;">Email support</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>

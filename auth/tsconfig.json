@@ -1,0 +1,75 @@
+{
+  // Visit https://aka.ms/tsconfig to read more about this file
+  "compilerOptions": {
+    // File Layout
+    "rootDir": "./src",
+    "outDir": "./build",
+    // Environment Settings
+    // See also https://aka.ms/tsconfig/module
+    "module": "es2020",
+    "moduleResolution": "bundler",
+    "target": "es2022",
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": ["node"],
+
+    // For nodejs:
+    // "lib": ["esnext"],
+    // "types": ["node"],
+    // and npm install -D @types/node
+    // Other Outputs
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    // Stricter Typechecking Options
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    // Style Options
+    // "noImplicitReturns": true,
+    // "noImplicitOverride": true,
+    // "noUnusedLocals": true,
+    // "noUnusedParameters": true,
+    // "noFallthroughCasesInSwitch": true,
+    // "noPropertyAccessFromIndexSignature": true,
+    // Recommended Options
+    "strict": true,
+    "jsx": "react-jsx",
+    // "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force",
+    "skipLibCheck": true,
+    "paths": {
+      "@/*": ["./src/*"],
+      "@constants/*": ["./src/Constants/*"],
+      "@context/*": ["./src/context/*"],
+      "@controllers/*": ["./src/controllers/*"],
+      "@hoshpitalcontrollers/*":["./src/controllers/Hoshpital/*"],
+      "@data/*": ["./src/data/superadmin/*"],
+      "@hospitaldata/*": ["./src/data/hoshpital/*"],
+      "@db/*": ["./src/db/*"],
+      "@migrations/*": ["./src/db/migrations/*"],
+      "@hospitalmigrations/*": ["./src/db/migrations/hoshpital/*"],
+      "@models/*": ["./src/db/models/*"],
+      "@hoshpitalmodels/*": ["./src/db/models/hoshpital/*"],
+      "@seeder/*": ["./src/db/seeder/*"],
+       "@superadminseeder/*": ["./src/db/seeder/SuperAdmin/*"],
+      "@entities/*": ["./src/entities/*"],
+      "@integrations/*": ["./src/integrations/*"],
+      "@jobs/*": ["./src/jobs/*"],
+      "@logs/*": ["./src/logs/*"],
+      "@middleware/*": ["./src/middleware/*"],
+      "@plugins/*": ["./src/plugins/*"],
+      "@repositories/*": ["./src/Repositories/*"],
+      "@hospitalrepositories/*": ["./src/Repositories/hoshpital/*"],
+      "@routes/*": ["./src/routes/*"],
+      "@scripts/*": ["./src/scripts/*"],
+      "@services/*": ["./src/Services/*"],
+      "@types/*": ["./src/types/*"],
+      "@utils/*": ["./src/utils/*"],
+      "@validation/*": ["./src/validation/*"],
+      "@hospitalroutes/*":["./src/routes/Hoshpital/*"]
+    }
+  },
+  "include": ["src/**/*"]
+}

@@ -1,0 +1,16 @@
+FROM node:18
+
+WORKDIR /app
+
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+
+# Build TypeScript
+RUN npm i
+
+
+EXPOSE 8000
+
+CMD ["sh","-c","npm run migrate && npm run seed CountrySeeder && npm run seed OrgStatusSeeder && npm run seed ModuleSeeder && npm run seed RoleSeeder && npm run seed SubModuleSeeder && npm run seed PermissionSeeder && npm run dev"]

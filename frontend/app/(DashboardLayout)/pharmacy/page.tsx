@@ -1,0 +1,280 @@
+"use client";
+import Card from "@/components/medinexus/pharmacy/cards/Card";
+import { useEffect, useState } from "react";
+import {
+  cards,
+  expiryAlerts,
+  lowStockMedicines,
+} from "@/data/dashboard/pharmacydashboard";
+import { PieChart } from "@/components/medinexus/charts/piecharts/PieChart";
+import { LineChart } from "@/components/medinexus/charts/piecharts/LineChart";
+import Table from "@/components/medinexus/Table";
+import { Van } from "lucide-react";
+
+const labels = ["January", "February", "March", "April", "May", "June", "July"];
+export default function page() {
+  const [cardlist, setCards] = useState(cards);
+  const [expiryAlertsdata, SetexpiryAlerts] = useState(expiryAlerts);
+  const [lowstockmedicinesdata, setLowStockMedicines] =
+    useState(lowStockMedicines);
+
+  return (
+    <>
+      <div className="flex flex-col space-y-8">
+        <h1>Prescription</h1>
+
+        <div className="grid grid-cols-4 gap-4">
+          {cardlist.map((item, index) => (
+            <Card
+              key={index}
+              label={item.label}
+              total={item.total}
+              icons={item.icons}
+            />
+          ))}
+        </div>
+
+        <div className="grid grid-cols-2 gap-8">
+          <div className="bg-white h-fitflex flex-col justify-center items-center">
+            <h1 className="bg-[#14967f] text-white p-2 w-full">
+              Medicine Sales Trend
+            </h1>
+
+            <div className=" p-2 ">
+              <LineChart />;
+            </div>
+          </div>
+
+          <div className="bg-white h-fitflex flex-col justify-center items-center">
+            <h1 className="bg-[#14967f] text-white p-2 w-full">
+              Stock by Category
+            </h1>
+
+            <div className=" p-2 ">
+              <PieChart
+                labels={["Red", "Blue", "Yellow", "Green", "Purple", "Orange"]}
+              />
+            </div>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-6 gap-8">
+          <div className="bg-white h-fitflex flex-col justify-center items-center col-span-4">
+            <h1 className="bg-[#14967f] text-white p-2 w-full">
+              Recent Prescriptions
+            </h1>
+            <div className="">
+              <Table
+                data={[]}
+                showaction={true}
+                columns={[
+                  { title: "Patient" },
+                  { title: "Medicine" },
+                  { title: "Prescribed By" },
+                  { title: "Status" },
+                ]}
+              />
+            </div>
+          </div>
+
+          <div className="bg-white h-fitflex flex-col justify-center items-center col-span-2">
+            <h1 className="bg-[#14967f] text-white p-2 w-full">Expiry Alert</h1>
+
+            <div className="expiryAlerts flex flex-col space-y-4">
+              {expiryAlertsdata.map((item, index) => (
+                <div
+                  key={index}
+                  className="flex justify-between items-center p-6  bg-slate-50 shadow"
+                >
+                  <div>
+                    <div className="flex space-x-4">
+                      <h1>{item.medicine}</h1>
+                      <div>{item.quantity} MG</div>
+                    </div>
+
+                    <div className="flex space-x-4">
+                      <span>batchNo</span>
+                      <span>{item.batchNo}</span>
+                    </div>
+                  </div>
+
+                  <div className="bg-red-600 p-2 text-white font-semibold rounded-sm">
+                    5 days ago
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="bg-white h-fitflex flex-col justify-center items-center col-span-6">
+            <h1 className="bg-[#14967f] text-white p-2 w-full">
+              {" "}
+              Low Stock Medicines
+            </h1>
+
+            <div className="">
+              <Table
+                data={lowstockmedicinesdata}
+                showaction={true}
+                columns={[
+                  { title: "Medicine" },
+                  { title: "Category" },
+                  { title: "Available Qty" },
+                  { title: "reorderLevel" },
+                  { title: "Supplier" },
+                  { title: "shortfall" },
+                  { title: "status" },
+                  { title: "" },
+                ]}
+              />
+            </div>
+          </div>
+
+          <div className="bg-white h-fitflex flex-col justify-center items-center col-span-3">
+            <h1 className="bg-[#14967f] text-white p-2 w-full">
+              {" "}
+              Top Selling Medicines
+            </h1>
+
+            <div className="top-selling">
+              <div className="flex flex-col space-y-2  p-3">
+                <div className="flex justify-between ">
+                  <span>Paracetamol 500Mg</span>
+                  <span>312 units</span>
+                </div>
+                <div className="w-full bg-neutral-quaternary rounded-full h-2">
+                  <div className="bg-dark h-2 rounded-full w-4"></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-2  p-3">
+                <div className="flex justify-between ">
+                  <span>Amoxicillin 500Mg</span>
+                  <span>312 units</span>
+                </div>
+                <div className="w-full bg-neutral-quaternary rounded-full h-2">
+                  <div className="bg-red-600 h-2 rounded-full w-32"></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-2  p-3">
+                <div className="flex justify-between ">
+                  <span>Cough Syrup </span>
+                  <span>312 units</span>
+                </div>
+                <div className="w-full bg-neutral-quaternary rounded-full h-2">
+                  <div className="bg-yellow-600 h-2 rounded-full w-14"></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-2  p-3">
+                <div className="flex justify-between ">
+                  <span>Ibuprofen</span>
+                  <span>312 units</span>
+                </div>
+                <div className="w-full bg-neutral-quaternary rounded-full h-2">
+                  <div className="bg-green-600 h-2 rounded-full w-26"></div>
+                </div>
+              </div>
+
+              <div className="flex flex-col space-y-2  p-3">
+                <div className="flex justify-between ">
+                  <span>Insulin Vials</span>
+                  <span>312 units</span>
+                </div>
+                <div className="w-full bg-neutral-quaternary rounded-full h-2">
+                  <div className="bg-red-600 h-2 rounded-full w-52"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="bg-white h-fitflex flex-col justify-center items-center col-span-3">
+            <h1 className="bg-[#14967f] text-white p-2 w-full">
+              {" "}
+              Suppliers Overview
+            </h1>
+
+            <div className="suppliers_overview">
+              <div className="flex justify-between p-6 w-full bg-yellow-50 border-b border-gray-200">
+                <div className="flex space-x-4  w-1/2">
+                  <div className="bg-blue-100 p-2 rounded">
+                    <Van className="text-blue-600" />
+                  </div>
+
+                  <div className="flex flex-col space-y-1">
+                    <span>MedSupply Co.</span>
+                    <span>18 orders this month</span>
+                  </div>
+                </div>
+
+                <div className="">
+                  <span className="bg-yellow-100 p-2 text-yellow-600 rounded">
+                    OnTime
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex justify-between p-6 w-full bg-yellow-50 border-b border-gray-200">
+                <div className="flex space-x-4  w-1/2">
+                  <div className="bg-yellow-100 p-2 rounded">
+                    <Van className="text-yellow-600" />
+                  </div>
+
+                  <div className="flex flex-col space-y-1">
+                    <span>MedSupply Co.</span>
+                    <span>18 orders this month</span>
+                  </div>
+                </div>
+
+                <div className="">
+                  <span className="bg-blue-100 p-2 text-blue-600 rounded">
+                    OnTime
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex justify-between p-6 w-full bg-yellow-50 border-b border-gray-200">
+                <div className="flex space-x-4  w-1/2">
+                  <div className="bg-green-100 p-2 rounded">
+                    <Van className="text-green-600" />
+                  </div>
+
+                  <div className="flex flex-col space-y-1">
+                    <span>MedSupply Co.</span>
+                    <span>18 orders this month</span>
+                  </div>
+                </div>
+
+                <div className="">
+                  <span className="bg-green-100 p-2 text-green-600 rounded">
+                    OnTime
+                  </span>
+                </div>
+              </div>
+
+              <div className="flex justify-between p-6 w-full bg-yellow-50 border-b border-gray-200">
+                <div className="flex space-x-4  w-1/2">
+                  <div className="bg-red-100 p-2 rounded">
+                    <Van className="text-red-600" />
+                  </div>
+
+                  <div className="flex flex-col space-y-1">
+                    <span>MedSupply Co.</span>
+                    <span>18 orders this month</span>
+                  </div>
+                </div>
+
+                <div className="">
+                  <span className="bg-blue-100 p-2 text-blue-600 rounded">
+                    OnTime
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+}

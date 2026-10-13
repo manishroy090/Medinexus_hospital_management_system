@@ -1,0 +1,339 @@
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Pen</title>
+      <style>
+         @media only screen and (min-width: 1024px) {
+         .template_header{
+         background-color: red;
+         }
+         .phone{
+         display: none;
+         }
+         .pc{
+         display: block;
+         }
+         }
+         /* Targets standard mobile phones in portrait */
+         @media (max-width: 480px) {
+         .phone{
+         display: block;
+         }
+         .pc{
+         display: none;
+         }
+         }
+         /* Targets tablets and large phones in landscape */
+         @media (min-width: 481px) and (max-width: 1023px) {
+         /* Styles go here */
+         .phone{
+         display: block;
+         }
+         .pc{
+         display: none;
+         }
+         }
+         /* Targets small or older mobile devices (e.g., iPhone SE) */
+         @media (max-width: 320px) {
+         /* Styles go here */
+         .phone{
+         display: block;
+         }
+         .pc{
+         display: none;
+         }
+         }
+      </style>
+   </head>
+   <body style="padding: 0;  ">
+      {{!-- phone/email design --}}
+      <div class="phone">
+         <div
+            class="template"
+            style="
+            {{!-- overflow: hidden; --}}
+            border-radius: 0.75rem;
+            box-shadow:
+            0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px -1px rgba(0, 0, 0, 0.1);"
+            >
+            {{!-- header section --}}
+            <div
+               class="template_header"
+               style="
+               background: linear-gradient(to right, #14967f, #12b886);
+               color: white;
+               width:100%;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <table>
+               <tbody>
+                  <tr>
+                     <td  style=" padding:2rem;   font-size: 6px;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:32px;">
+                                 <img
+                                    style="height:7rem"
+                                    src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                                    alt="Medinexus logo"
+                                    />
+                              </td>
+                           </tr>
+                           <tr>
+                              <span style="display:block; font-weight: 600; font-size:0.8rem;">A whitelisted healthcare system</span>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </div>
+            {{!-- process section --}}
+            <div
+               class="template_header"
+               style="
+               color:#0f4a3d;
+               background: white;
+               width:100%;
+               padding-top: 1rem;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <b>Hi Benjamin,<b>
+               <p style="line-height: 1.6;   font-weight: normal;">
+                  I hope you're doing well.
+                  I wanted to share the details for our upcoming Medinexus healthcare system prototype demonstration:
+                  Date: Monday, July 6
+                  Time: 7:15 – 9:45 PM (Asia/Kathmandu)
+                  Google Meet link: https://meet.google.com/edi-cpws-jii
+                  Please let me know if this time works for you or if you'd like to adjust anything. Looking forward to walking you through the prototype.
+               </p>
+                <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>Best Regards</span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <span>Medinexus</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+            {{!-- footer section --}}
+            <div
+               class="template_header"
+               style="
+               background: #fef9c2;
+               color: white;
+               width:100%;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <table>
+                  <tbody>
+                     <tr style="font-size: 6px; color:grey">
+                        <td >Questions in the meantime? Reach us at</td>
+                        <td> <img
+                           width="100"
+                           height="50"
+                           src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                           alt="Medinexus logo"
+                           /></td>
+                     </tr>
+                  </tbody>
+               </table>
+               <table>
+                  <tbody>
+                     <tr>
+                        <td  style="font-size: 1px; color:grey;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:24px; display:inline">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px;  border-radius: 50%;">
+                                       <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="8" height="8" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:5px;">
+                                    <span style="display:block;">+977 9705057572</span>
+                                    <p style="margin:4px 0 0;">Call or WhatsApp</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                        <td  style="font-size: 1px; color:grey; padding-left:2rem;">
+                           <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                              <tr >
+                                 <td style="vertical-align:top; width:24px; display:inline">
+                                    <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:6px;  border-radius: 50%;">
+                                       <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="8" height="8" alt="" style="display:block;" />
+                                    </div>
+                                 </td>
+                                 <td style="vertical-align:top; padding-left:5px;">
+                                    <span style="display:block;">manishrayoffical9824@gmail.com</span>
+                                    <p style="margin:4px 0 0;">Email support</p>
+                                 </td>
+                              </tr>
+                           </table>
+                        </td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+      </div>
+      <div style="overflow:hidden" class="pc">
+         <div style="
+            {{!-- overflow: hidden; --}}
+            border-radius: 0.75rem;
+            box-shadow:
+            0 1px 3px 0 rgba(0, 0, 0, 0.1),
+            0 1px 2px -1px rgba(0, 0, 0, 0.1);
+            ">
+            <div
+               class="template_header"
+               style="
+               background: linear-gradient(to right, #14967f, #12b886);
+               color: white;
+               width:100%;
+               padding-bottom: 1rem;
+               padding-left: 1rem;
+               "
+               >
+               <table style=" width:100%">
+                  <tbody>
+                     <tr>
+                        <td>
+                           <h1>Medinexus</h1>
+                        </td>
+                        <td>  <img
+                           style="height:7rem"
+                           src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                           alt="Medinexus logo"
+                           /></td>
+                     </tr>
+                     <tr><span>A whitelisted healthcare system</span></tr>
+                  </tbody>
+               </table>
+               <div >
+               </div>
+            </div>
+         </div>
+         <div
+            class="template_header"
+            style="
+            color:#0f4a3d;
+            background: white;
+            width:100%;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            "
+            >
+            <b>Hi Benjamin,<b>
+            <p style="padding-top: 2rem; padding-right: 2rem;   font-weight: normal;">
+               I hope you're doing well.
+               I wanted to share the details for our upcoming Medinexus healthcare system prototype demonstration:
+               Date: Monday, July 6
+               Time: 7:15 – 9:45 PM (Asia/Kathmandu)
+               Google Meet link: https://meet.google.com/edi-cpws-jii
+               Please let me know if this time works for you or if you'd like to adjust anything. Looking forward to walking you through the prototype.
+            </p>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <span>Best Regards</span>
+                        </td>
+                    </tr>
+                     <tr>
+                        <td>
+                            <span>Medinexus</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+             
+         </div>
+         <div
+            class="template_header"
+            style="
+            background: #fef9c2;
+            color: white;
+            width:100%;
+            padding-bottom: 1rem;
+            padding-left: 1rem;
+            "
+            >
+            <table style="width: 100%;">
+               <tbody>
+                  <tr style="font-size: 1rem; color:grey">
+                     <td >Questions in the meantime? Reach us at</td>
+                     <td> <img
+                        width="180"
+                        height="110"
+                        src="https://gems-frontend-git-dev-manishroy090s-projects.vercel.app/hrm_image/newlogo.svg"
+                        alt="Medinexus logo"
+                        /></td>
+                  </tr>
+                  <tr style="font-size: 1rem; color:grey">
+                     <td>
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:24px; display:inline">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:14px;  border-radius: 50%;">
+                                    <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="16" height="16" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:5px;">
+                                 <span style="display:block;">+977 9705057572</span>
+                                 <p style="margin:4px 0 0;">Call or WhatsApp</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                     <td>
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:24px; display:inline">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:14px;  border-radius: 50%;">
+                                    <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="16" height="16" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:5px;">
+                                 <span style="display:block;">manishrayoffical9824@gmail.com</span>
+                                 <p style="margin:4px 0 0;">Email support</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                     <td style="display: none;">
+                        <table role="presentation" cellpadding="0" cellspacing="0" border="0">
+                           <tr >
+                              <td style="vertical-align:top; width:24px; display:inline">
+                                 <div style="background: linear-gradient(to right, #14967f, #12b886); display:inline-block; padding:14px;  border-radius: 50%;">
+                                    <img   src="https://i.ibb.co/YTRx2xzK/shield-2.png" width="16" height="16" alt="" style="display:block;" />
+                                 </div>
+                              </td>
+                              <td style="vertical-align:top; padding-left:5px;">
+                                 <span style="display:block;">support@medinexus.com</span>
+                                 <p style="margin:4px 0 0;">Email support</p>
+                              </td>
+                           </tr>
+                        </table>
+                     </td>
+                  </tr>
+               </tbody>
+            </table>
+         </div>
+      </div>
+   </body>
+</html>
