@@ -2,8 +2,12 @@
 import Table from "@/components/medinexus/Table";
 import { useEffect, useState } from "react";
 import Link from "next/link";
-
+import Card from "@/components/medinexus/laboratory/cards/card";
+import { cards } from "@/data/dashboard/laboratorydashboard";
 const Laboratory = () => {
+
+  const [cardlist, setCards] = useState(cards);
+  
   const data = [
     {
       report_id: "#LT-3201",
@@ -141,80 +145,18 @@ const Laboratory = () => {
 
   return (
     <div className="flex flex-col space-y-8">
-      <div className="flex justify-between ">
-        <div className="bg-[#14967f] relative h-32 w-82 flex items-center space-x-2 text-white justify-between rounded-bl-[40px] rounded-tr-[50px] px-2">
-          <div className="flex flex-col ">
-            <span className="font-semibold text-nowrap text-black text-yellow-200 font-semibold text-base ">
-              Pending Collection
-            </span>
-            <span className="text-xl font-semibold text-white italic">200</span>
-          </div>
-          <img
-            src={"/laboratory_icons/18357116.png"}
-            className="h-18 mr-18 opacity-40 absolute right-9"
-          />
-          <div className=" rounded-md">
-            <img src={"/laboratory_icons/reaction.png"} className="h-14 w-15" />
-          </div>
-        </div>
+      <h1>Laboratoryy Dashboard</h1>
 
-        <div className="bg-[#14967f] relative h-32 w-82 flex items-center space-x-2 text-white justify-between rounded-bl-[40px] rounded-tr-[50px] px-2">
-          <div className="flex flex-col ">
-            <span className="font-semibold text-nowrap text-black text-yellow-200 fontsemibold text-base">
-              In Progress
-            </span>
-            <span className="text-xl font-semibold text-white italic">200</span>
-          </div>
-          <img
-            src={"/laboratory_icons/18357116.png"}
-            className="h-18 mr-18 opacity-40 absolute right-9"
-          />
-
-          <div className=" rounded-md">
-            <img
-              src={"/laboratory_icons/microscope (1).png"}
-              className="h-14 w-15"
+        <div className="grid grid-cols-4 gap-4">
+          {cardlist.map((item, index) => (
+            <Card
+              key={index}
+              label={item.label}
+              total={item.total}
+              icons={item.icons}
             />
-          </div>
+          ))}
         </div>
-
-        <div className="bg-[#14967f] relative h-32 w-82 flex items-center space-x-2 text-white justify-between rounded-bl-[40px] rounded-tr-[50px] px-2">
-          <div className="flex flex-col ">
-            <span className="font-semibold text-nowrap text-black text-yellow-200 fontsemibold text-base">
-              Completed Today
-            </span>
-            <span className="text-xl font-semibold text-white italic">200</span>
-          </div>
-          <img
-            src={"/laboratory_icons/18357116.png"}
-            className="h-18 mr-18 opacity-40 opacity-40 absolute right-9"
-          />
-
-          <div className="rounded-md">
-            <img
-              src={"/laboratory_icons/monitoring.png"}
-              className="h-14 w-15"
-            />
-          </div>
-        </div>
-
-        <div className="bg-[#14967f] relative h-32 w-82 flex items-center space-x-2 text-white justify-between rounded-bl-[40px] rounded-tr-[50px] px-2">
-          <div className="flex flex-col ">
-            <span className="font-semibold text-nowrap text-yellow-200 text-white fontsemibold text-base">
-              Critical Results
-            </span>
-            <span className="text-xl font-semibold text-white italic">200</span>
-          </div>
-          <img
-            src={"/laboratory_icons/18357116.png"}
-            className="h-18 mr-18 opacity-40 opacity-40 absolute right-9"
-          />
-
-          <div className="rounded-md">
-            <img src={"/laboratory_icons/9356599.png"} className="h-14 w-12" />
-          </div>
-        </div>
-      </div>
 
       <div className="flex flex-col space-y-10">
         <div className="flex justify-between">

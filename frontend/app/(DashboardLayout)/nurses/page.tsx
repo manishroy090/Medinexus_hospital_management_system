@@ -1,5 +1,5 @@
 "use client";
-import Card from "@/components/medinexus/pharmacy/cards/Card";
+import Card from "@/components/medinexus/nurses/cards/Cards";
 import { useEffect, useState } from "react";
 import {
   cards,
