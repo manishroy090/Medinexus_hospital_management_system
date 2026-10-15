@@ -145,7 +145,7 @@ const Laboratory = () => {
 
   return (
     <div className="flex flex-col space-y-8">
-      <h1>Laboratoryy Dashboard</h1>
+      <h1>Laboratory Dashboard</h1>
 
         <div className="grid grid-cols-4 gap-4">
           {cardlist.map((item, index) => (
