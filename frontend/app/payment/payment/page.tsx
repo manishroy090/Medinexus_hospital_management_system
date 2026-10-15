@@ -10,7 +10,7 @@ const PurchaseOrder = () => {
   const [paymentMethod, setPaymentMethod] = useState("card");
 
   return (
-    <div className="flex justify-between items-center w-400 border border-gray-300 bg-white rounded-2xl mt-20 items-center ml-50">
+    <div className="flex justify-self-center items-center w-400 border border-gray-300 bg-white rounded-2xl mt-20 items-center">
      
       {/* Left Side */}
       <div className="flex flex-col bg-white px-20 py-19 w-200 h-full border border-emerald-100 rounded-3xl shadow-xl hover:border-emerald-300 hover:-translate-y-0.5 transition duration-300">
